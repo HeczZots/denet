@@ -62,7 +62,7 @@ curl -X POST http://localhost:8080/login \
 3. Завершение задания
 ```
 curl -X POST http://localhost:8080/users/1/task/complete \
--H "Authorization: Bearer <ваш-JWT-токен>" \
+-H "Authorization: токен" \
 -d '{
   "telegram_user_id": 1834623444
 }'
@@ -70,5 +70,5 @@ curl -X POST http://localhost:8080/users/1/task/complete \
 4. Таблица лучших
 ```
 curl -X GET http://localhost:8080/users/leaderboard \
--H "Authorization: Bearer <ваш-JWT-токен>" \
+-H "Authorization: токен" \
 ```
