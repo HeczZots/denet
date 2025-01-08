@@ -152,7 +152,7 @@ func (d *DB) SetRefferer(ctx context.Context, userID, referID int) error {
 		return errors.New("refer_uid is already set or user not found")
 	}
 
-	err = d.IncrementPoints(ctx, tx, userID)
+	err = d.IncrementPoints(ctx, tx, referID)
 	if err != nil {
 		return fmt.Errorf("failed to increment refer points: %w", err)
 	}
